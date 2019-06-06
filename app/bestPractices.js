@@ -8,7 +8,8 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      myObject = {
+      //Convert global variable to local variable
+      let myObject = {
         name : 'Jory'
       };
 
@@ -26,11 +27,13 @@ define(function() {
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+      //Use radix part here
+      return parseInt(num, 10);
     },
 
     identity : function(val1, val2) {
-
+      //Strict comparison
+      return (val1 === val2 ? true : false)
     }
   };
 });
