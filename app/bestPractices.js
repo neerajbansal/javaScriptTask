@@ -5,18 +5,18 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
  * populated incorrectly; your job is to fix them. Other methods are not
  * populated at all; your job is to fill them out.
  */
-define(function() {
+define(function () {
   return {
-    globals : function() {
+    globals: function () {
       //Convert global variable to local variable
       let myObject = {
-        name : 'Jory'
+        name: 'Jory'
       };
 
       return myObject;
     },
 
-    functions : function(flag) {
+    functions: function (flag) {
       if (flag) {
         function getValue() { return 'a'; }
       } else {
@@ -26,14 +26,14 @@ define(function() {
       return getValue();
     },
 
-    parseInt : function(num) {
+    parseInt: function (num) {
       //Use radix part here
       return parseInt(num, 10);
     },
 
-    identity : function(val1, val2) {
+    identity: function (val1, val2) {
       //Strict comparison
-      return (val1 === val2 ? true : false)
+      return (val1 === val2 ? true : false);
     }
   };
 });
