@@ -1,9 +1,17 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define(function() {
+define(function () {
   return {
-    createModule : function(str1, str2) {
+    createModule: function (str1, str2) {
 
+      let moduleObj = {
+        "greeting": str1,
+        "name": str2,
+        "sayIt": function () {
+          return (moduleObj.greeting + ", " + moduleObj.name);
+        }
+      }
+      return moduleObj;
     }
   };
 });
